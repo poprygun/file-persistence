@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Saved file info.</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+
+<form th:action="@{/delete}" th:object="${fileData}" method="post">
+    <p th:text="'Saved file content: ' + ${fileData.content}"/>
+    <br/>
+    <p th:text="'Saved file path: ' + ${fileData.filePath}"/>
+    <br/>
+    <input type="hidden" th:field="${fileData.filePath}" />
+    <button type="submit">Delete</button>
+</form>
+</body>
+</html>
