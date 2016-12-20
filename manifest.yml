@@ -1,0 +1,7 @@
+---
+applications:
+- name: file-persistence
+  memory: 1G
+  path: target/file-persistence.jar
+  env:
+      SPRING_PROFILES_ACTIVE: cloud,S3
